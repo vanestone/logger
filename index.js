@@ -41,6 +41,7 @@ function dev (opts) {
     if (typeof opts === 'function') {
       transporter = opts
     } else if (opts && opts.transporter) {
+      if (opts.hasOwnProperty('chalk')) chalk.enabled = opts.chalk
       transporter = opts.transporter
     }
 
